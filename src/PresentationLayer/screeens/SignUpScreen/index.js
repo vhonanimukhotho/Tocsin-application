@@ -8,7 +8,7 @@ const SignUpScreen = () => {
 
   const [email, onChangeEmail] = React.useState("");
   const [password, onChangePassword] = React.useState("");
-  const [text, onChangeText] = React.useState("");
+  const [confirmPassword, onChangeConfirmPassword] = React.useState("");
 
   return (
     <View style={styles.container}>
@@ -36,8 +36,8 @@ const SignUpScreen = () => {
                 </View>
                 <TextInput
                     style={styles.input}
-                    onChangeText={onChangeEmail}
-                    value={email}
+                    onChangeText={onChangePassword}
+                    value={password}
                     secureTextEntry={true}
                     placeholder="Password"
                 />
@@ -48,8 +48,8 @@ const SignUpScreen = () => {
                 </View>
                 <TextInput
                     style={styles.input}
-                    onChangeText={onChangeEmail}
-                    value={email}
+                    onChangeText={onChangeConfirmPassword}
+                    value={confirmPassword}
                     secureTextEntry={true}
                     placeholder="Confirm Password"
                 />
