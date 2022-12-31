@@ -2,9 +2,11 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './styles'
 import { Octicons, AntDesign, Ionicons, FontAwesome } from '@expo/vector-icons'; 
+import { useNavigation } from '@react-navigation/native'
 
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
 
   const [email, onChangeEmail] = React.useState("");
   const [password, onChangePassword] = React.useState("");
@@ -103,7 +105,7 @@ const SignUpScreen = () => {
         {/********************* To login page **********************/}
         <TouchableOpacity
           style={styles.navButton}
-          onPress={() => alert('to log in!')}>
+          onPress={() => navigation.navigate('LoginScreen')}>
           <Text style={styles.navButtonText}>Have an account? Sign In</Text>
         </TouchableOpacity>
 
